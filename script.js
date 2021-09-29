@@ -107,21 +107,19 @@ $( "#5pm" ).click(function() {
   text9 = $("#5pmtext").val(set9);
 
 
-  $( ".row" ).each(function() {
-    theone=$(this).children('div').text()
-    color=$(this).children('textarea')
-    time=moment(theone,"ha").format("MM/DD/YYYY h:00:00")
-    now=moment().format("MM/DD/YYYY h:00:00")
-    console.log(now)
-    console.log(time)
-    if (moment(theone,"ha").isBefore(moment().format("ha"))==true){
-      $(color).addClass('bg-danger')
-    }
-    if(time==now){
-      $(color).addClass('bg-success')
-    }
-    if(moment(theone,"ha").isAfter(moment().format("ha"))==true){
-      $(color).addClass('bg-primary')
-    }
-
-  });
+$( ".row" ).each(function() {
+  display=$("#currentDay").text(moment().format("dddd, MMMM Do YYYY"))
+  theone=$(this).children('div').text()
+  color=$(this).children('textarea')
+  time=moment(theone,"ha").format("MM/DD/YYYY H:00:00");
+  now=moment().format("MM/DD/YYYY H:00:00");
+  if (moment(time).isBefore(moment(now))==true){
+    $(color).addClass('past')
+  }
+  if(moment(time).isSame(moment(now))==true){
+    $(color).addClass('present')
+  }
+  if(moment(time).isAfter(moment(now))==true){
+    $(color).addClass('future')
+  }
+});
