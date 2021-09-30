@@ -1,3 +1,5 @@
+<!-- Below is the required code to get the web page deployed as well as links to various libraries such as Bootstrap,
+    other links included are for third party fonts. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,17 +20,22 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <!-- Below is the link element used to link the CSS file as well as the title of the web page. -->
+    <link rel="stylesheet" href="./CSS/style.css" />
     <title>Work Day Scheduler</title>
   </head>
-
+<!-- This is the body of the page which contains everything displayed on the page.-->
   <body>
+      <!-- Below is the header of the page which is positioned using Bootstrap. -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    <!-- Below is the container that houses each section with the class "row". -->
     <div class="container">
+        <!-- Below is are the sections of code which display a timeframe, a textarea and a save button. Each of them are given classes
+            from Bootstrap for positioning and styling. -->
       <div class="row">
         <div class="col border-dark border-top border-right border-bottom time-block">9am</div>
         <textarea id="9amtext" class="col-8 border border-dark rounded"></textarea>
@@ -75,9 +82,9 @@
         <button id="5pm" class="col border border-dark saveBtn">Save</button>
       </div>
     </div>
-
+    <!-- Below are the elements linking Jquery, Moment, and the Javascript document. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./JS/script.js"></script>
   </body>
 </html>
