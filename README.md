@@ -4,14 +4,15 @@ Website: Work Day Scheduler
 
 This is a project I did for the University of Denver Coding Bootcamp. A lot of the HTML and CSS were given to me as starter code.
 
+The page runs using Javascript, HTML and CSS.
 
+The page is used to save daily tasks which are saved via local storage.
 
 My assignment was as follows:
 
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
-
 
 
 My Acceptance Criteria was as follows:
